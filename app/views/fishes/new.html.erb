@@ -1,0 +1,21 @@
+<h1>Fishes#new</h1>
+
+<br>
+<%= link_to 'go fishes index', '/fishes/index' %>
+
+<%= form_for(@fish, url: {:controller => :fishes, :action => :new}) do |f| %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :note %>
+    <%= f.text_area :note, cols: "30", rows: "10" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+
+<% end %>

@@ -1,0 +1,26 @@
+<h1>Animals#new</h1>
+
+<br>
+<%= link_to 'go animals index', '/animals/index' %>
+
+<%= form_for(@animal, url: {:controller => :animals, :action => :new}) do |f| %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :note %>
+    <%= f.text_area :note, cols: "30", rows: "10" %>
+  </div>
+
+  <div class="field">
+    <%- f.label :image %><br>
+    <%= f.file_field :image_animal %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
