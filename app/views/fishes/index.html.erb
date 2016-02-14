@@ -8,6 +8,7 @@
     <tr>
       <th>Name</th>
       <th>note</th>
+      <th>image</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,6 +19,7 @@
       <tr>
         <td><%= fish.name %></td>
         <td><%= fish.note %></td>
+        <td><%= image_tag animal.image_fish_url(:thumb)  %></td>
       </tr>
     <% end %>
   </tbody>

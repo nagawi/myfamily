@@ -21,7 +21,7 @@ class FishesController < ApplicationController
 
   def fish_params
 
-    params.require(:fish).permit(:name,:note)
+    params.require(:fish).permit(:name, :note, :image_fish)
 
   end
 end
