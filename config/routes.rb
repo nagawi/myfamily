@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
+  get 'top_page/index'
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
+
+  get 'toppage/index', to: 'toppage#index'
+
   get 'fishes/index', to: 'fishes#index'
 
   get 'fishes/new', to: 'fishes#new'
