@@ -1,0 +1,40 @@
+<h1>コメントフォーラム</h1>
+
+<table class="index">
+  <thead>
+    <tr>
+      <th>name</th>
+      <th>comment</th>
+      <th colspan="3"></th>
+    <tr>
+  </thead>
+
+  <tbody>
+    <% @comments.each do |comment| %>
+      <tr>
+        <td><%= comment.name %></td>
+        <td><%= comment.cmt %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+
+<%= form_for(@comment, url: {:controller => :comments, :action => :index}) do |f| %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cmt %>
+    <%= f.text_area :cmt, cols: "30", rows: "10" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+<% end %>

@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+
+  resources :comments
+
+  # get 'comments/index'
+
   get 'top_page/index'
 
   devise_for :admin_users, ActiveAdmin::Devise.config
@@ -17,6 +22,7 @@ Rails.application.routes.draw do
   post 'animals/new', to: 'animals#create'
 
   post 'fishes/new', to: 'fishes#create'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
