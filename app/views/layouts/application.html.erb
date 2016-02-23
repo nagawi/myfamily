@@ -7,13 +7,30 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<audio preload="auto" controls loop>
+  <source src="/assets/seaside2.mp3">
+  <p>ご利用のブラウザではこの音声を再生できません。</p>
+</audio>
+<div>
+</div>
 <% if notice.present? %>
   <p class="notice"><%= notice %></p>
 <% end %>
 <% if alert.present? %>
   <p class="alert"><%= alert %></p>
 <% end %>
+ <div class="pad">
+  <ul class="right sample" style="list-style:none">
+   <li class="margin"><%= link_to 'Animals','/animals/index', :style=> "color:#ffff00;" %></li>
+   <li class="margin"><%= link_to 'Fishes', '/fishes/index' , :style=> "color:#ffff00;"%></li>
+   <li class="margin"><%= link_to 'Comment', '/comments', :style=> "color:#ffff00;" %></li>
+   <li class="margin"><%= link_to 'Top', '/top_page/index', :style=> "color:#ffff00;" %></li>
+  </ul>
+ </div>
+  <br>
+
 <%= yield %>
+
 
 </body>
 </html>

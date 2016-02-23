@@ -1,28 +1,18 @@
-<h1>Animals#index</h1>
-
-<br>
-<%= link_to 'go fishes', '/fishes/index' %>
-
-<table class="index">
-
-<thead>
-    <tr>
-      <th>Name</th>
-      <th>note</th>
-      <th>image</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<h1 class="title" >Animals</h1>
 
 
-<tbody>
-    <% @animals.each do |animal| %>
-      <tr>
-        <td><%= animal.name %></td>
-        <td><%= animal.note %></td>
-        <td><%= image_tag animal.image_animal_url(:thumb)  %></td>
-      </tr>
-    <% end %>
-  </tbody>
 
-</table>
+    
+<% @animals.each do |animal| %>
+
+<div style="float:left;">
+ <div class="content">
+
+   <p><%= image_tag animal.image_animal_url(:thumb) %></p>
+
+   <p><%= animal.name %></p>
+
+   <p><%= animal.note %></p>
+ </div>
+</div>
+<% end %>

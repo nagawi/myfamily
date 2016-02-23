@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
 
-  resources :comments
+  # resources :comments
 
-  # get 'comments/index'
+  get 'comments/', to: 'comments#index'
+
+  post 'comennts/', to: 'comments#create'
 
   get 'top_page/index'
 

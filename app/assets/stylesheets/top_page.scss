@@ -1,3 +1,25 @@
 // Place all the styles related to the top_page controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.prof {
+  text-align:center;
+  width:400px;
+  margin-top:50px;
+  background-color:#3FAFBF
+}
+.right {
+  margin-left: auto;
+}
+.margin {
+  font-size: 180%;
+  font-weight: 200%;
+  float: left;
+  margin-right: 20px;
+}
+.content {
+  width:270px;
+  margin-top:50px;
+  margin-left:10px;
+  background-color:#3FAFBF
+}
