@@ -21,9 +21,9 @@ Rails.application.routes.draw do
 
   get 'animals/new', to: 'animals#new'
 
-  post 'animals/new', to: 'animals#create'
+  post 'animals', to: 'animals#create'
 
-  post 'fishes/new', to: 'fishes#create'
+  post 'fishes', to: 'fishes#create'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

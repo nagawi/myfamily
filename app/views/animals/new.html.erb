@@ -3,7 +3,7 @@
 <br>
 <%= link_to 'go animals index', '/animals/index' %>
 
-<%= form_for(@animal, url: {:controller => :animals, :action => :new}) do |f| %>
+<%= form_for(@animal, url: {:controller => :animals, :action => :create}) do |f| %>
 
   <div class="field">
     <%= f.label :name %>
